@@ -9,6 +9,7 @@ defmodule NervesHubLinkCommon.FwupConfig do
             fwup_devpath: "/dev/mmcblk0",
             fwup_env: [],
             fwup_task: "upgrade",
+            fwup_extra_options: [],
             handle_fwup_message: nil,
             update_available: nil
 
@@ -37,6 +38,7 @@ defmodule NervesHubLinkCommon.FwupConfig do
           fwup_devpath: Path.t(),
           fwup_task: String.t(),
           fwup_env: [{String.t(), String.t()}],
+          fwup_extra_options: [String.t()],
           handle_fwup_message: handle_fwup_message_fun,
           update_available: update_available_fun
         }

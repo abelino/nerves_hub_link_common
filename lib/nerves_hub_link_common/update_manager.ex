@@ -256,9 +256,8 @@ defmodule NervesHubLinkCommon.UpdateManager do
       "-d",
       config.fwup_devpath,
       "--task",
-      config.fwup_task,
-      "--unsafe"
-    ]
+      config.fwup_task
+    ] ++ config.fwup_extra_options
 
     Enum.reduce(config.fwup_public_keys, args, fn public_key, args ->
       args ++ ["--public-key", public_key]
